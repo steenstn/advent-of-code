@@ -1,11 +1,13 @@
-class Day1 {
+class Day1 : Day("day1.txt") {
 
-    fun part1(list: List<Int>) {
+    private val intList: List<Int> = list.map { it.toInt() }
 
-        var x = list.first()
+    fun part1() {
+
+        var x = intList.first()
         var res = 0
-        list.drop(1).forEach {
-            if(it > x) {
+        intList.drop(1).forEach {
+            if (it > x) {
                 res++
             }
             x = it
@@ -13,19 +15,19 @@ class Day1 {
         println(res)
     }
 
-    fun part2(list: List<Int>) {
-        var first = list[0]
-        var second = list[1]
-        var third = list[2]
+    fun part2() {
+        var first = intList[0]
+        var second = intList[1]
+        var third = intList[2]
 
         var oldSum = first + second + third
         var res = 0
-        list.drop(3).forEach {
+        intList.drop(3).forEach {
             first = second
             second = third
             third = it
             val sum = first + second + third
-            if(sum > oldSum) {
+            if (sum > oldSum) {
                 res++
             }
             oldSum = sum
