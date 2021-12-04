@@ -7,7 +7,7 @@ class Day4 : Day("day4.txt") {
     fun part1() {
         var bingo = false
         for (number in numbers) {
-            if(bingo) {
+            if (bingo) {
                 break
             }
             for (board in boards) {
@@ -78,15 +78,8 @@ class Day4 : Day("day4.txt") {
             return false
         }
 
-        fun uncheckedSum(): Int {
-            var sum = 0
-            rows.flatten().forEach {
-                if (!it.checked) {
-                    sum += it.number
-                }
-            }
-            return sum
-        }
+        fun uncheckedSum() = rows.flatten().filter { !it.checked }.sumOf { it.number }
+
 
     }
 
