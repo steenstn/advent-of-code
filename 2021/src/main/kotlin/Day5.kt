@@ -1,3 +1,6 @@
+import kotlin.math.max
+import kotlin.math.min
+
 class Day5 : Day("day5.txt") {
 
     var lines: MutableList<Line> = mutableListOf()
@@ -31,14 +34,14 @@ class Day5 : Day("day5.txt") {
 
         fun drawLine(coordinates: MutableMap<Coordinate, Int>) {
             if (x1 == x2) {
-                val start = Math.min(y1, y2)
-                val stop = Math.max(y1, y2)
+                val start = min(y1, y2)
+                val stop = max(y1, y2)
                 for (y in start..stop) {
                     coordinates[Coordinate(x1, y)] = coordinates[Coordinate(x1, y)]?.let { it + 1 } ?: 1
                 }
             } else if (y1 == y2) {
-                val start = Math.min(x1, x2)
-                val stop = Math.max(x1, x2)
+                val start = min(x1, x2)
+                val stop = max(x1, x2)
                 for (x in start..stop) {
                     coordinates[Coordinate(x, y1)] = coordinates[Coordinate(x, y1)]?.let { it + 1 } ?: 1
                 }
@@ -66,8 +69,8 @@ class Day5 : Day("day5.txt") {
                     Direction.DOWNRIGHT -> 1
                 }
 
-                val startX = Math.min(x1, x2)
-                val stopX = Math.max(x1, x2)
+                val startX = min(x1, x2)
+                val stopX = max(x1, x2)
                 var x = x1
                 var y = y1
                 for (i in startX..stopX) {
