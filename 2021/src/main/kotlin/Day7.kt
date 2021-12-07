@@ -23,9 +23,8 @@ class Day7 : Day("day7.txt") {
         for (i in positions.indices) {
             sum = 0
             for (j in positions.indices) {
-                for (k in 0..abs(positions[i] - positions[j])) {
-                    sum += k
-                }
+                val n = abs(positions[i] - positions[j])
+                sum = n * (n + 1) / 2
             }
             sums.add(sum)
         }
