@@ -48,24 +48,24 @@ class Day9 : Day("day9.txt") {
         val basins = mutableListOf<Int>()
         for (x in 1 until heightmap.size - 1) {
             for (y in 1 until heightmap.first().size - 1) {
-                basins.add(floodFill(x, y, 0))
+                basins.add(floodFill(x, y))
             }
         }
         val sorted = basins.sortedDescending()
         println(sorted[0] * sorted[1] * sorted[2])
     }
 
-    fun floodFill(x: Int, y: Int, fillCounter: Int): Int {
+    fun floodFill(x: Int, y: Int): Int {
         if (heightmap[x][y] == 9) {
-            return fillCounter
+            return 0
         }
 
         heightmap[x][y] = 9
 
-        return floodFill(x - 1, y, fillCounter) +
-                floodFill(x + 1, y, fillCounter) +
-                floodFill(x, y - 1, fillCounter) +
-                floodFill(x, y + 1, fillCounter) + 1
+        return floodFill(x - 1, y) +
+                floodFill(x + 1, y) +
+                floodFill(x, y - 1) +
+                floodFill(x, y + 1) + 1
     }
 
 
