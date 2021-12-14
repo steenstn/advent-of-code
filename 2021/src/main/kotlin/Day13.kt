@@ -83,7 +83,7 @@ class Day13 : Day("day13.txt") {
             val yMax = dots.keys.maxOf { it.y }
             for (y in 0..yMax) {
                 for (x in 0..xMax) {
-                    dots[Coordinate(x, y)]?.let { print(it) } ?: print(".")
+                    dots[Coordinate(x, y)]?.let { print(it) } ?: print(" ")
                 }
                 println()
             }
