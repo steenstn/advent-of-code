@@ -30,7 +30,7 @@ class Day14 : Day("day14.txt") {
             }
 
             var newPolymer = newPairs.joinToString("")
-            
+
             polymer = newPolymer
         }
         println(polymer.length)
