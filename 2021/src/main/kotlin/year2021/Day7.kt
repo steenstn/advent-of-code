@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import kotlin.math.abs
 
-class Day7 : Day("day7.txt") {
+class Day7 : Day("/year2021/day7.txt") {
 
     val positions = list.first().split(",").map { it.toInt() }
 

@@ -1,8 +1,11 @@
+package year2021
+
+import Day
 import java.util.*
 import kotlin.math.ceil
 import kotlin.math.floor
 
-class Day18 : Day("day18.txt") {
+class Day18 : Day("/year2021/day18.txt") {
 
     val numbers = mutableListOf<SnailfishNumber>()
 

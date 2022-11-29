@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import java.util.*
 
-class Day10 : Day("day10.txt") {
+class Day10 : Day("/year2021/day10.txt") {
 
     val closingCharMap = mapOf(
         '(' to ')',

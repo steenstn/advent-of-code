@@ -1,4 +1,8 @@
-class Day2 : Day("day2.txt") {
+package year2021
+
+import Day
+
+class Day2 : Day("/year2021/day2.txt") {
 
     fun part1() {
 

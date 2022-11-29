@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import java.util.*
 
-class Day13 : Day("day13.txt") {
+class Day13 : Day("/year2021/day13.txt") {
 
 
     val coordinates = mutableMapOf<Coordinate, Char>()

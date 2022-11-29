@@ -1,5 +1,9 @@
+package year2021
+
+import Day
+
 var paddingValue = 1
-class Day20 : Day("day20.txt") {
+class Day20 : Day("/year2021/day20.txt") {
 
     val algorithm: String
 

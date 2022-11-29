@@ -1,4 +1,8 @@
-class Day3 :Day("day3.txt") {
+package year2021
+
+import Day
+
+class Day3 : Day("/year2021/day3.txt") {
 
     fun part1() {
         val histogram = mutableListOf(0,0,0,0,0,0,0,0,0,0,0,0)

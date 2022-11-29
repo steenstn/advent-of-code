@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import java.util.*
 
-class Day12 : Day("day12.txt") {
+class Day12 : Day("/year2021/day12.txt") {
 
     fun part1() {
 

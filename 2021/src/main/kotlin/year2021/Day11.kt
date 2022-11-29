@@ -1,4 +1,8 @@
-class Day11 : Day("day11.txt") {
+package year2021
+
+import Day
+
+class Day11 : Day("/year2021/day11.txt") {
 
     val octopuses = mutableMapOf<Coordinate, Octopus>()
     var numFlashes = 0

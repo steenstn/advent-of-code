@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import java.util.*
 
-class Day15 : Day("day15.txt") {
+class Day15 : Day("/year2021/day15.txt") {
 
     var cave = mutableMapOf<Coordinate, Int>()
     var xMax: Int

@@ -1,4 +1,8 @@
-class Day8 : Day("day8.txt") {
+package year2021
+
+import Day
+
+class Day8 : Day("/year2021/day8.txt") {
 
     var segmentMap = mutableMapOf<String, String>(
         "a" to "",

@@ -1,4 +1,8 @@
-class Day1 : Day("day1.txt") {
+package year2021
+
+import Day
+
+class Day1 : Day("/year2021/day1.txt") {
 
     private val intList: List<Int> = list.map { it.toInt() }
 

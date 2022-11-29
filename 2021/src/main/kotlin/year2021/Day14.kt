@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import java.math.BigInteger
 
-class Day14 : Day("day14.txt") {
+class Day14 : Day("/year2021/day14.txt") {
     var polymer: String
     var rules = mutableListOf<Rule>()
 

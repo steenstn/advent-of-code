@@ -1,4 +1,8 @@
-class Day6 : Day("day6.txt") {
+package year2021
+
+import Day
+
+class Day6 : Day("/year2021/day6.txt") {
 
     var fishes = list.first().split(",").map { it.toLong() }
     val school = School()

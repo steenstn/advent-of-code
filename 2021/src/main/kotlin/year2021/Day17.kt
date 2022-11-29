@@ -1,6 +1,9 @@
+package year2021
+
+import Day
 import kotlin.math.abs
 
-class Day17 : Day("day17.txt") {
+class Day17 : Day("/year2021/day17.txt") {
 
     class Rect(val x: Int, val y: Int, val width: Int, val height: Int)
     data class Position(val x: Int, val y: Int, val vx: Int, val vy: Int) {
