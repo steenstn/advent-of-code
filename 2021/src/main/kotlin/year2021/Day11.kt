@@ -1,5 +1,6 @@
 package year2021
 
+import Coordinate
 import Day
 
 class Day11 : Day("/year2021/day11.txt") {
@@ -82,7 +83,6 @@ class Day11 : Day("/year2021/day11.txt") {
 
     }
 
-    data class Coordinate(val x: Int, val y: Int)
     class Octopus(val x: Int, val y: Int, var energy: Int, var flashed: Boolean = false)
 
 }

@@ -7,7 +7,9 @@ class Day1: Day("/year2022/day1.txt") {
         println(list)
     }
 
-    fun part2() {}
+    fun part2() {
+
+    }
 
 
 }

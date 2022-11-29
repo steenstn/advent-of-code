@@ -1,5 +1,6 @@
 package year2021
 
+import Coordinate
 import Day
 import java.util.*
 
@@ -136,5 +137,4 @@ class Day15 : Day("/year2021/day15.txt") {
         return c.x < 0 || c.x > xMax || c.y < 0 || c.y > yMax
     }
 
-    data class Coordinate(val x: Int, val y: Int)
 }

@@ -1,5 +1,6 @@
 package year2021
 
+import Coordinate
 import Day
 import kotlin.math.max
 import kotlin.math.min
@@ -31,7 +32,6 @@ class Day5 : Day("/year2021/day5.txt") {
         println(map.filter { it.value >= 2 }.size)
     }
 
-    data class Coordinate(val x: Int, val y: Int)
 
     data class Line(val x1: Int, val y1: Int, val x2: Int, val y2: Int) {
 

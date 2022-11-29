@@ -1,5 +1,6 @@
 package year2021
 
+import Coordinate
 import Day
 
 var paddingValue = 1
@@ -89,5 +90,4 @@ class Day20 : Day("/year2021/day20.txt") {
     }
 
 
-    data class Coordinate(val x: Int, val y: Int)
 }

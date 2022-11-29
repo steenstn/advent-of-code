@@ -1,5 +1,6 @@
 package year2021
 
+import Coordinate
 import Day
 import java.util.*
 
@@ -39,7 +40,6 @@ class Day13 : Day("/year2021/day13.txt") {
         paper.print()
     }
 
-    data class Coordinate(val x: Int, val y: Int)
     data class Fold(val direction: Direction, val position: Int) {
 
         enum class Direction {
