@@ -1,5 +1,5 @@
 import year2022.Day7
 
 fun main() {
-   Day7().part1()
+   Day7().part2()
 }
