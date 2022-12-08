@@ -30,6 +30,7 @@ class Day7 : Day("/year2022/day7.txt") {
     fun part1() {
         var sum = 0L
         sizes.forEach {
+            println(it.key + ": " + it.value)
             if (it.value <= 100000) {
                 sum += it.value
             }
