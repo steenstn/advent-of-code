@@ -1,5 +1,5 @@
-import year2022.Day10
+import year2023.Day1
 
 fun main() {
-   Day10().part2()
+   Day1().part2()
 }
