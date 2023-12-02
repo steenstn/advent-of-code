@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day1 : Day("/year2021/day1.txt") {
+class Day1 : Day() {
 
     private val intList: List<Int> = list.map { it.toInt() }
 

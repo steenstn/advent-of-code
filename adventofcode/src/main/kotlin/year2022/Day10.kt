@@ -2,7 +2,7 @@ package year2022
 
 import Day
 
-class Day10 : Day("/year2022/day10.txt") {
+class Day10 : Day() {
 
     init {
 

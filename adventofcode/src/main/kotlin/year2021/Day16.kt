@@ -4,7 +4,7 @@ import Day
 
 var versionNumbers = 0L
 
-class Day16 : Day("/year2021/day16.txt") {
+class Day16 : Day() {
 
     val binaryMap = mapOf(
         '0' to "0000",

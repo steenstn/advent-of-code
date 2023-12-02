@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day3 : Day("/year2021/day3.txt") {
+class Day3 : Day() {
 
     fun part1() {
         val histogram = mutableListOf(0,0,0,0,0,0,0,0,0,0,0,0)

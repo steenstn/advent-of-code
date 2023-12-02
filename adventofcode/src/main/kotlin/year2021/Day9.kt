@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day9 : Day("/year2021/day9.txt") {
+class Day9 : Day() {
 
     val heightmap: MutableList<MutableList<Int>> = mutableListOf()
 

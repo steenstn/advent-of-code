@@ -2,7 +2,7 @@ package year2023
 
 import Day
 
-class Day1 : Day("/year2023/day1.txt") {
+class Day1 : Day() {
 
     fun part1() {
         var sum = 0L

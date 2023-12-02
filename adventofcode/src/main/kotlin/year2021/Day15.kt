@@ -4,7 +4,7 @@ import Coordinate
 import Day
 import java.util.*
 
-class Day15 : Day("/year2021/day15.txt") {
+class Day15 : Day() {
 
     var cave = mutableMapOf<Coordinate, Int>()
     var xMax: Int

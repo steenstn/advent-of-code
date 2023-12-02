@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day8 : Day("/year2021/day8.txt") {
+class Day8 : Day() {
 
     var segmentMap = mutableMapOf<String, String>(
         "a" to "",

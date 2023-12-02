@@ -3,7 +3,7 @@ package year2022
 import Day
 import java.util.*
 
-class Day5 : Day("/year2022/day5.txt") {
+class Day5 : Day() {
 
     val boxes = mutableMapOf<Int, Stack<Char>>()
 

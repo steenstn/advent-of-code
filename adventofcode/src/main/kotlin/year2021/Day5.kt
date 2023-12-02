@@ -5,7 +5,7 @@ import Day
 import kotlin.math.max
 import kotlin.math.min
 
-class Day5 : Day("/year2021/day5.txt") {
+class Day5 : Day() {
 
     var lines: MutableList<Line> = mutableListOf()
     val map = mutableMapOf<Coordinate, Int>()

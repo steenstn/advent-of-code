@@ -7,7 +7,7 @@ import kotlin.math.cos
 import kotlin.math.round
 import kotlin.math.sin
 
-class Day19 : Day("/year2021/day19.txt") {
+class Day19 : Day() {
 
     val scanners = mutableListOf<Scanner>()
 

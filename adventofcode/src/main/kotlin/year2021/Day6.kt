@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day6 : Day("/year2021/day6.txt") {
+class Day6 : Day() {
 
     var fishes = list.first().split(",").map { it.toLong() }
     val school = School()

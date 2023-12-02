@@ -4,7 +4,7 @@ import Coordinate
 import Day
 import kotlin.math.abs
 
-class Day9 : Day("/year2022/day9.txt") {
+class Day9 : Day() {
 
     data class Knot(var pos: Coordinate = Coordinate(0, 0), var oldPos: Coordinate = Coordinate(0, 0), val parent: Knot? = null)
 

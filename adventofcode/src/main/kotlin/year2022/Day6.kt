@@ -2,7 +2,7 @@ package year2022
 
 import Day
 
-class Day6 : Day("/year2022/day6.txt") {
+class Day6 : Day() {
 
     fun part1() {
         var index = 0

@@ -3,7 +3,7 @@ package year2021
 import Coordinate
 import Day
 
-class Day11 : Day("/year2021/day11.txt") {
+class Day11 : Day() {
 
     val octopuses = mutableMapOf<Coordinate, Octopus>()
     var numFlashes = 0

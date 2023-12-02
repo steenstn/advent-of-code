@@ -3,7 +3,7 @@ package year2022
 import Day
 import java.util.*
 
-class Day7 : Day("/year2022/day7.txt") {
+class Day7 : Day() {
 
     val sizes = mutableMapOf<String, Long>()
     val currentFolder = Stack<String>()

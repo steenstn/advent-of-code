@@ -2,7 +2,7 @@ package year2022
 
 import Day
 
-class Day8 : Day("/year2022/day8.txt") {
+class Day8 : Day() {
 
     val width = list[0].length
     val height = list.size

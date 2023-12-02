@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day4 : Day("/year2021/day4.txt") {
+class Day4 : Day() {
 
     val numbers: List<Int> = list.first().split(",").map { Integer.parseInt(it) }
     val boards: List<Board> = list.drop(1).filter { it.isNotBlank() }.chunked(5).map { Board(it) }

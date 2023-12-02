@@ -2,7 +2,7 @@ package year2022
 
 import Day
 
-class Day1 : Day("/year2022/day1.txt") {
+class Day1 : Day() {
 
     val elves = mutableListOf<Int>()
 

@@ -2,7 +2,7 @@ package year2022
 
 import Day
 
-class Day3 : Day("/year2022/day3.txt") {
+class Day3 : Day() {
 
     fun score(c: Char): Int {
         if (c.isUpperCase()) return c.code - 38

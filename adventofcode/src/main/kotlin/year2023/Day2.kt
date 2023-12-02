@@ -3,7 +3,7 @@ package year2023
 import Day
 import java.lang.Integer.max
 
-class Day2 : Day("/year2023/day2.txt") {
+class Day2 : Day() {
 
     fun part1() {
         val maxMap = mapOf(

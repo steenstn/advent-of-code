@@ -2,7 +2,7 @@ package year2021
 
 import Day
 
-class Day21 : Day("/year2021/day21.txt") {
+class Day21 : Day() {
 
     val dice = Dice()
 
