@@ -32,7 +32,7 @@ class Day4 : Day() {
                 when(it) {
                     '-' -> print(" ")
                     else -> {
-                        val number = (it.code-97+(sectorId%26))%26+97
+                        val number = (it.code-'a'.code+(sectorId%26))%26+'a'.code
                         print((number.toChar()))
                     }
                 }
