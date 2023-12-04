@@ -61,9 +61,9 @@ class Day3 : Day() {
 
             numbers.forEach { number ->
                 if (index > 0) {
-                    val startIndex = clamp(number.range.first - 1, 0, number.range.first)
-                    val endIndex = startIndex + number.value.length + 2
-                    val stringAbove = list[index - 1].substring(startIndex, clamp(endIndex, 0, line.length - 1))
+                    val startIndex = clamp(number.range.first - 1, 0, number.range.first-1)
+                    val endIndex = startIndex + number.value.length + if (number.range.first == 0) 1 else 2
+                    val stringAbove = list[index - 1].substring(startIndex, clamp(endIndex, 0, line.length))
                     val starIndex = stringAbove.indexOf('*')
                     if (starIndex > -1) {
                         if (starMap[Coordinate(startIndex + stringAbove.indexOf('*'), index - 1)] == null) {
@@ -77,7 +77,7 @@ class Day3 : Day() {
 
                 val charBeforeNumberPosition = clamp(number.range.first - 1, 0, number.range.first)
                 val charBeforeNumber = line[charBeforeNumberPosition]
-                val charAfterNumberPosition = clamp(number.range.last + 1, number.range.last, line.length - 1)
+                val charAfterNumberPosition = clamp(number.range.last+1, number.range.last+1, line.length-1)
                 val charAfterNumber = line[charAfterNumberPosition]
 
                 if (charBeforeNumber == '*') {
@@ -99,8 +99,8 @@ class Day3 : Day() {
 
                 if (index < list.size - 1) {
                     val startIndex = clamp(number.range.first - 1, 0, number.range.first)
-                    val endIndex = startIndex + number.value.length + 2
-                    val stringBelow = list[index + 1].substring(startIndex, clamp(endIndex, 0, line.length - 1))
+                    val endIndex = startIndex + number.value.length + if (number.range.first == 0) 1 else 2
+                    val stringBelow = list[index + 1].substring(startIndex, clamp(endIndex, 0, line.length))
                     val starIndex = stringBelow.indexOf('*')
                     if (starIndex > -1) {
                         if (starMap[Coordinate(startIndex + stringBelow.indexOf('*'), index + 1)] == null) {
@@ -124,7 +124,6 @@ class Day3 : Day() {
             sum += gearRatio
         }
         println(sum)
-        // Not 79209891
     }
 
 
