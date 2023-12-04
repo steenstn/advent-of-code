@@ -1,6 +1,7 @@
 package year2016
 
 import Day
+import Utils.Companion.clamp
 
 data class Coordinate(val x: Int, val y: Int)
 class Day2 : Day() {
@@ -30,7 +31,12 @@ class Day2 : Day() {
                     'L' -> x--
                     'R' -> x++
                 }
+                x = clamp(x,0,2)
+                y = clamp(y,0, 2)
             }
+            code+=keyMap[Coordinate(x,y)]
+
         }
+        println(code)
     }
 }
