@@ -36,4 +36,27 @@ class Day9 : Day() {
         return result
     }
 
+    fun part2() {
+        var historySum = 0L
+
+        list.forEach { line ->
+            val numbers = line.split(" ").map { it.toInt() }.toMutableList()
+
+            val differences = mutableListOf<MutableList<Int>>()
+            differences.add(getDifference(numbers))
+            while (true) {
+                if (differences.last().all { it == 0 }) {
+                    break
+                }
+                differences.add(getDifference(differences.last()))
+            }
+            differences.last().add(0, 0)
+            for (i in differences.size - 2 downTo 0) {
+                differences[i].add(0, differences[i].first() - differences[i + 1].first())
+            }
+            numbers.add(0, numbers.first() - differences[0].first())
+            historySum += numbers.first()
+        }
+        println(historySum)
+    }
 }
