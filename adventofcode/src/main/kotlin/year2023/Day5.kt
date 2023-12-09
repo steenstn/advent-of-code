@@ -49,7 +49,7 @@ class Day5 : Day() {
         }
         println(min)
     }
-    
+
     private fun moveSeed(seed: Long, rangeMap: List<Range>): Long {
         val sourceRange: Range = rangeMap.find { it.source.contains(seed) } ?: return seed
         val positionInRange = seed - sourceRange.source.first
