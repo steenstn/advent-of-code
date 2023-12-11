@@ -1,8 +1,8 @@
-import year2023.Day9
+import year2023.Day11
 import kotlin.time.measureTime
 
 fun main() {
-   val time = measureTime { Day9().part2() }
+   val time = measureTime { Day11().part1() }
    println()
    println("Duration: ${time.inWholeMilliseconds} ms")
 

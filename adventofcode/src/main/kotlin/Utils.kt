@@ -8,5 +8,17 @@ class Utils {
         fun clamp(value: Int, min: Int, max: Int): Int {
             return if (value > max) max else if (value < min) min else value
         }
+
+        fun transpose(list: List<String>): List<String> {
+            val res = mutableListOf<String>()
+            for (x in list.first().indices) {
+                res.add("")
+                for (y in list.indices) {
+                    res[x] = res[x] + list[y][x]
+                }
+            }
+            return res
+        }
+
     }
 }
