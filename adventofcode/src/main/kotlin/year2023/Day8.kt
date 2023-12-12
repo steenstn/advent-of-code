@@ -1,6 +1,7 @@
 package year2023
 
 import Day
+import kotlin.math.abs
 
 class Day8 : Day() {
 
@@ -43,26 +44,47 @@ class Day8 : Day() {
     fun part2() {
         val ghosts = nodes.filter { it.key.endsWith("A") }.values.toList().toMutableList()
 
-
-        var moveIndex = 0
-        var numberOfMoves = 0L
-        while(!ghosts.all { it.id.endsWith("Z") }) {
-            val currentMove = moves[moveIndex]
-            for(i in ghosts.indices) {
-                if(currentMove == 'L') {
-                    ghosts[i] = nodes[ghosts[i].left]!!
+        val steps = mutableListOf<Long>()
+        for (i in ghosts.indices) {
+            var moveIndex = 0
+            var ghost = ghosts[i]
+            var ghostSteps = 0
+            while (!ghost.id.endsWith("Z")) {
+                val currentMove = moves[moveIndex]
+                ghost = if (currentMove == 'L') {
+                    nodes[ghost.left]!!
                 } else {
-                    ghosts[i] = nodes[ghosts[i].right]!!
+                    nodes[ghost.right]!!
                 }
-            }
+                moveIndex++
+                ghostSteps++
 
-            moveIndex++
-            numberOfMoves++
+                if (moveIndex >= moves.length) {
+                    moveIndex = 0
+                }
 
-            if (moveIndex >= moves.length) {
-                moveIndex = 0
             }
+            steps.add(ghostSteps.toLong())
         }
-        println(numberOfMoves)
+        println(lcm(lcm(lcm(lcm(lcm(steps[0], steps[1]), steps[2]), steps[3]), steps[4]), steps[5]))
+
+    }
+
+    // Lowest common multiple
+    private fun lcm(a: Long, b: Long): Long {
+        return abs(a * b) / gcd(a, b)
+    }
+
+    // Greatest common denominator
+    private fun gcd(_a: Long, _b: Long): Long {
+        var a = _a
+        var b = _b
+        while (b != 0L) {
+            val t = b
+            b = a % b
+            a = t
+        }
+        return a
+
     }
 }
