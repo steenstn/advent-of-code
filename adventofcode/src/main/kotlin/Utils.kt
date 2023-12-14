@@ -1,3 +1,5 @@
+import kotlin.math.abs
+
 class Utils {
 
     companion object {
@@ -20,5 +22,15 @@ class Utils {
             return res
         }
 
+        fun manhattanDistance(a: Coordinate, b: Coordinate): Int {
+            return abs(a.x - b.x) + abs(a.y - b.y)
+        }
+        fun manhattanDistance(a: CoordinateLong, b: CoordinateLong): Long {
+            return abs(a.x - b.x) + abs(a.y - b.y)
+        }
+        fun String.indicesOf(target: Char) = mapIndexedNotNull { index, c -> index.takeIf {c == target} }
+
+        fun <E> Iterable<E>.indicesOf(e: E)
+                = mapIndexedNotNull{ index, elem -> index.takeIf{ elem == e } }
     }
 }
